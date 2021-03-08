@@ -19,9 +19,9 @@ spring:
           uri: lb://cloud-payment-service  #匹配后提供服务的路由地址
           predicates:
             - Path=/payment/lb/**         # 断言，路径相匹配的进行路由
-            - After=2021-03-08T14:55:03.826+08:00[Asia/Shanghai]
-            - Cookie=username,heyhuo
-            - Header=X-Request-Id, \d+
+#            - After=2021-03-08T14:55:03.826+08:00[Asia/Shanghai]
+#            - Cookie=username,heyhuo
+#            - Header=X-Request-Id, \d+
 
       discovery:
         locator:
