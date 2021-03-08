@@ -44,6 +44,12 @@ public class PaymentController {
         }
     }
 
+    @GetMapping(value = "/lb")
+    public String getPaymentLB() {
+        return serverPort;//返回服务接口
+    }
+
+
     @GetMapping(value = "/get/{id}")
     public CommonResult getPaymentById(@PathVariable("id") Long id) {
         Payment payment = paymentService.getPaymentById(id);

@@ -17,7 +17,6 @@ import javax.annotation.Resource;
 @RestController
 @Slf4j
 @RequestMapping("/payment")
-
 public class PaymentController {
     @Autowired
     private PaymentService paymentService;
@@ -35,6 +34,11 @@ public class PaymentController {
         }else{
             return new CommonResult(444,"插入数据库失败",result);
         }
+    }
+
+    @GetMapping(value = "/lb")
+    public String getPaymentLB() {
+        return serverPort;//返回服务接口
     }
 
     @GetMapping(value = "/get/{id}")
